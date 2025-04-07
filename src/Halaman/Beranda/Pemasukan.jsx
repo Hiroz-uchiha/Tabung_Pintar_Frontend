@@ -1,26 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useRingkasan } from './RekeningContext'
 
 const Pemasukan = () => {
+    const {ringkas,getRingkasan} = useRingkasan();
+    
+    
     const ringkasan = [
         {
             title : "Pemasukan : ",
-            value : 122,
+            value : ringkas.totalPemasukan,
             warna : "text-green-500"
         },
         
         {
             title : "Pengeluaran : ",
-            value : 123,
+            value : ringkas.totalPengeluaran,
             warna : "text-red-500"
 
         },
         {
             title : "Total : ",
-            value : 124,
+            value : ringkas.totalUang,
             warna : "text-black"
         },
 
     ]
+
+
+    useEffect(() => {
+        getRingkasan()
+    },[])
 
   return (
     <div className=' w-1/2 mx-auto mt-3 p-2 flex flex-col shadow-md bg-white'>
@@ -29,7 +38,11 @@ const Pemasukan = () => {
            {ringkasan.map((item,index) => (
                 <ul className='flex justify-between px-2 py-1' key={index}>
                     <li>{item.title}</li>
-                    <li className={`${item.warna}`}>{item.value} Rp</li>
+                    <li className={`${item.warna}`}>
+                        {new Intl.NumberFormat("id-ID", {
+                            style : "currency",
+                            currency : "IDR"
+                        }).format(item.value)}</li>
                 </ul>
            ))}
         </div>
