@@ -59,7 +59,7 @@ const Login = () => {
             </div>
         </div>
         <div className=' w-3/6'>
-            <img src={logo} alt="Logo" className='h-full w-full' />
+            <img src={logo} alt="" className='h-full w-full' />
         </div>
 
     </div>
