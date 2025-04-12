@@ -8,7 +8,7 @@ const Beranda = () => {
     <div>
         <Pemasukan/>
         <Rekening/>
-        <Transaksi />
+        <Transaksi/>
     </div>
   )
 }
