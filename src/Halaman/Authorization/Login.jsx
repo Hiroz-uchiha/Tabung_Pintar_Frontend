@@ -44,8 +44,8 @@ const Login = () => {
 
   return (
     <div>
-       <div className=' w-full flex container h-screen '>
-        <div className=' w-1/2 flex flex-col items-center justify-center space-y-3 bg-gray-700'>
+       <div className=' w-full flex h-screen '>
+        <div className='w-[70%] flex flex-col items-center justify-center space-y-3 bg-gray-700'>
             <h1 className=' text-3xl text-white'>Login</h1>
             <input type="text" className=' rounded-sm p-1 w-96 outline-none' placeholder='Email' onChange={e => setEmail(e.target.value)}  />
             <div className='flex bg-gray-200'>
@@ -58,8 +58,8 @@ const Login = () => {
                 <button className=' text-green-200' onClick={Register}>Register</button>
             </div>
         </div>
-        <div className=' w-3/6'>
-            <img src={logo} alt="" className='h-full w-full' />
+        <div className=' w-1/2 h-full flex'>
+            <img src={logo} alt="h-screen w-full object-cover" />
         </div>
 
     </div>

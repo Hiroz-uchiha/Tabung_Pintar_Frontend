@@ -12,6 +12,8 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [message, setMessage] = useState('');
   const navigasi = useNavigate()
+  const url = process.env.REACT_APP_API_URL
+
 
   const login = () => {
     navigasi("/login")
@@ -26,9 +28,9 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      const res = await axios.post("http://localhost:3001/user/register", form);
+      const res = await axios.post(`${url}/user/register`, form);
       setMessage("Register berhasil!");
-      console.log(res.data);
+      navigasi("/login");
     } catch (error) {
       setMessage(error.response?.data?.message || "Gagal register");
       console.error(error);

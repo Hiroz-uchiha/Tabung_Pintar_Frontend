@@ -8,7 +8,7 @@ import ProtectedRoute from './Halaman/Authorization/ProtectedRoute';
 
 function Layout() {
   const location = useLocation()
-  const hideNavbarPaths = ['/login','register']
+  const hideNavbarPaths = ['/login','/register']
 
   return (
     <div>
