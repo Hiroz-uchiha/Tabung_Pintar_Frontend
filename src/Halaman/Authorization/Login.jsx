@@ -45,7 +45,7 @@ const Login = () => {
   return (
     <div>
        <div className=' w-full flex h-screen '>
-        <div className='w-[70%] flex flex-col items-center justify-center space-y-3 bg-gray-700'>
+        <div className='w-full flex flex-col items-center justify-center space-y-3 bg-gray-700'>
             <h1 className=' text-3xl text-white'>Login</h1>
             <input type="text" className=' rounded-sm p-1 w-96 outline-none' placeholder='Email' onChange={e => setEmail(e.target.value)}  />
             <div className='flex bg-gray-200'>
@@ -57,9 +57,6 @@ const Login = () => {
                 <p className=' text-white mr-1'>Belum punya akun?</p>
                 <button className=' text-green-200' onClick={Register}>Register</button>
             </div>
-        </div>
-        <div className=' w-1/2 h-full flex'>
-            <img src={logo} alt="h-screen w-full object-cover" />
         </div>
 
     </div>

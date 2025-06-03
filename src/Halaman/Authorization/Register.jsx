@@ -38,8 +38,8 @@ const Register = () => {
   };
 
   return (
-    <div className='w-full flex container h-screen'>
-      <div className='w-1/2 flex flex-col items-center justify-center space-y-3 bg-gray-700'>
+    <div className='w-full flex h-screen'>
+      <div className='w-full flex flex-col items-center justify-center space-y-3 bg-gray-700'>
         <h1 className='text-3xl text-white'>Register</h1>
         
         <input
@@ -95,9 +95,6 @@ const Register = () => {
         </div>
       </div>
 
-      <div className='w-3/6'>
-        <img src={logo} alt="" className='h-full w-full' />
-      </div>
     </div>
   );
 }
